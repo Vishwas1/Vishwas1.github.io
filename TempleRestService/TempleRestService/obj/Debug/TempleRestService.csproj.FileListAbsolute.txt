@@ -1,5 +1,0 @@
-C:\Users\vab\Documents\Visual Studio 2012\Projects\TempleRestService\TempleRestService\bin\TempleRestService.dll
-C:\Users\vab\Documents\Visual Studio 2012\Projects\TempleRestService\TempleRestService\bin\TempleRestService.pdb
-C:\Users\vab\Documents\Visual Studio 2012\Projects\TempleRestService\TempleRestService\obj\Debug\TempleRestService.dll
-C:\Users\vab\Documents\Visual Studio 2012\Projects\TempleRestService\TempleRestService\obj\Debug\TempleRestService.pdb
-C:\Users\vab\Documents\Visual Studio 2012\Projects\TempleRestService\TempleRestService\obj\Debug\TempleRestService.csprojResolveAssemblyReference.cache
