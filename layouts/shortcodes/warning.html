@@ -1,8 +1,4 @@
-<aside aria-label="warning" class="note warning">
-  <div>
-    <svg class="sign" aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
-      <use xlink:href="#warning"></use>
-    </svg>
-    {{ .Inner }}
-  </div>
-</aside>
+<blockquote class="warning">
+    <strong>{{ .Get 0 | default "Warning" }}</strong><br>
+    {{ .Inner | markdownify }}
+</blockquote>

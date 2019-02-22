@@ -1,19 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
-  {{ partial "head.html" . }}
-  <body>
-    <a href="#main">skip to content</a>
-    {{ partial "svg.html" . }}
-    <div class="wrapper">
-      {{ partial "header.html" . }}
-      <div class="main-and-footer">
-        <div>
-          {{ block "main" . }}{{ end }}
-          {{ partial "footer.html" . }}
+<html lang="{{ .Site.LanguageCode }}">
+    {{ block "header" . }}{{ end }}
+    <body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
+    {{ partial "sidebar.html" . }}
+        <div class="content container">
+            {{ block "content" . }}{{ end }}
         </div>
-      </div>
-    </div>
-    {{ partial "script.html" . }}
-    {{ partial "google-analytics-async.html" . }}
-  </body>
+        {{ block "footer" . }}{{ end }}
+    </body>
 </html>

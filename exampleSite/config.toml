@@ -1,45 +1,72 @@
-baseURL = "https://example.com"
-languageCode = "en-us"
-defaultContentLanguage = "en"
-title = "Cupper"
-theme = "cupper-hugo-theme"
-googleAnalytics = "UA-123456789-1"
+## Basic Configuration
+baseurl = "https://example.com/"
+languageCode = "en"
 
-[taxonomies]
-  tag = "tags"
+title = "Title"
+theme = "hyde-hyde"
 
-[permalinks]
-  post = "/:filename/"
+## Hugo Built-in Features
+# disqusShortname = "your-disqus-shortname"
+# googleAnalytics = "your-google-analytics-id"
+# enableRobotsTXT = true
 
-[imaging]
-  quality = 99
+# summarylength = 30
 
+#paginate = 5
+
+## Site Settings
 [params]
-  description = "An accessibility-friendly Hugo theme, ported from the [original Cupper](https://github.com/ThePacielloGroup/cupper) project."
-  homeMetaContent = "An accessibility-friendly Hugo theme, ported from the original Cupper project."
-  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/)."
-  # For more date formats see https://gohugo.io/functions/format/
-  dateFormat = "Jan 2, 2006"
-  codePenUser = "someUser"
+    author = "Author"
+    title = "Title"
+    # description = "..."
+    authorimage = "/img/hugo.png"
+    dateformat = "Jan 2, 2006"
 
-[menu]
-  [[menu.nav]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.nav]]
-    name = "Blog"
-    url = "/post/"
-    weight = 2
-  [[menu.nav]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 3
-  [[menu.nav]]
+    # sidebar, copyright & license
+    copyright = "htr3n"
+    license = "CC BY-SA 4.0"
+    licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+    showBuiltWith = true
+
+    # https://highlightjs.org
+    highlightjs = true
+    highlightjsstyle = "github"
+    
+    # please choose either GraphComment or Disqus or Utterances
+    #GraphCommentId = "..."
+    #UtterancesRepo = "..." # https://utteranc.es/
+    #UtterancesIssueTerm = "..." # pathname, url, title, og:title
+    #UtterancesTheme = "..." # github-light or github-dark
+
+    # Table of contents
+    #toc = none, "hugo", or "tocbot"
+
+## Social Accounts
+[params.social]
+    github = "<username>"
+    instagram = "<username>"
+    xing = "<username>"
+    linkedin = "<username>"
+    twitter = "<username>"
+    facebook = "<username>"
+    stackoverflow = "<username>"
+    telegram = "<username>"
+    email = "your-email@example.com"
+    # gravatar = "your-email@example.com"
+
+## Main Menu
+[[menu.main]]
+    name = "Posts"
+    weight = 100
+    identifier = "posts"
+    url = "/posts/"
+[[menu.main]]
+    name = "Portfolio"
+    identifier = "portfolio"
+    weight = 200
+    url = "/portfolio/"
+[[menu.main]]
     name = "About"
+    identifier = "about"
+    weight = 300
     url = "/about/"
-    weight = 4
-  [[menu.nav]]
-    name = "RSS"
-    url = "/index.xml"
-    weight = 5
