@@ -1,4 +1,6 @@
-{{ if not (isset $.Site.Params "color_theme") }}
-  {{ errorf "Please complete the installation of Academic by following the steps at https://sourcethemes.com/academic/docs/install/" }}
+{{ define "main" }}
+  <main id="main">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </main>
 {{ end }}
-{{ partial "widget_page.html" . }}

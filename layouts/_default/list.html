@@ -1,38 +1,19 @@
-{{ if .Params.widgets }}
-
-{{ partial "widget_page.html" . }}
-
-{{ else }}
-
-{{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
-
-{{ partial "page_header.html" . }}
-
-<div class="universal-wrapper">
-  {{ with .Content }}
-  <div class="article-style" itemprop="articleBody">{{ . }}</div>
-  {{ end }}
-
-  {{ $paginator := .Paginate .Data.Pages }}
-  {{ range $paginator.Pages }}
-  <div>
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    <div class="article-style">
-      {{ if .Params.summary }}
-      {{ .Params.summary | plainify | emojify }}
-      {{ else if .Params.abstract }}
-      {{ .Params.abstract | plainify | emojify | truncate 250 }}
-      {{ else if .Summary }}
-      {{ .Summary | plainify | emojify }}
-      {{ end }}
-    </div>
-  </div>
-  {{ end }}
-
-  {{ partial "pagination" . }}
-</div>
-{{ partial "footer_container.html" . }}
-{{ partial "footer.html" . }}
-
+{{ define "main" }}
+  <main id="main">
+    <h1>{{ .Title }}</h1>
+    <ul class="patterns-list">
+    {{ range .Pages.ByPublishDate.Reverse }}
+      <li>
+        <h2>
+          <a href="{{ .Permalink }}">
+            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            {{ .Title }}
+          </a>
+        </h2>
+      </li>        
+    {{ end }}
+    </ul>
+  </main>
 {{ end }}
